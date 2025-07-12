@@ -1,0 +1,59 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+/* =============================
+   1. CSS RESET
+   ============================= */
+   *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  ul li {
+    font-style: none;
+    list-style: none;
+  }
+
+   /* =============================
+   2. VARIABLES
+   ============================= */
+
+   :root {
+    --ff: "Outfit", sans-serif;
+
+    --fs: 1.5rem;
+
+    --fw-300:300;
+    --fw-400:400;
+    --fw-600:600;
+
+    --c-white:#ffff;
+    --c-blue-500:#8bacda;
+    --c-cyan:#00fff7;
+    --c-blue-900:#14253d;
+    --c-blue-950:#0d192b;
+    --c-blue-800:#2f415b;
+}
+
+
+   /* =============================
+   3. BASE STYLES
+   ============================= */
+
+   /* =============================
+   4. LAYOUT / COMPONENT STYLES
+   ============================= */
+
+      /* =============================
+   5. BREAKPOINT CHNAGES
+   ============================= */
