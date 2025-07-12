@@ -24,6 +24,13 @@
     list-style: none;
   }
 
+  a {
+    font-style: none;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+
    /* =============================
    2. VARIABLES
    ============================= */
@@ -49,10 +56,120 @@
    /* =============================
    3. BASE STYLES
    ============================= */
+    body {
+    color: var(--c-blue-500);
+    font-family: var(--ff);
+   }
+
+   a:hover {
+    color: #00fff7;
+  }
 
    /* =============================
    4. LAYOUT / COMPONENT STYLES
    ============================= */
+   .wrapper{
+    background-color: var(--c-blue-950);
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+    .card {
+    background-color: var(--c-blue-900);
+    border-radius: 1rem;
+    padding: 1.125rem;
+    width: 21rem;
+   }
+
+   .card .nft-img {
+    position: relative;
+    border-radius: .5rem;
+}
+
+.card .nft-cover div{
+    position: absolute;
+    background-color: #00fff780;
+    width: 18.75rem;
+    height: 300px;
+    z-index: 999;
+    margin-top: -19rem;
+    border-radius: .5rem;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.card .nft-cover div:hover {
+    opacity: 100%;
+}
+
+.card .nft-cover div .overlay-icon {
+    width: 3rem;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+   h1 {
+    color: var(--c-white);
+    font-size: 1.5rem;
+    font-weight: var(--fw-400);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+   }
+
+   .text p {
+    line-height: 1.5rem;
+    font-weight: var(--fw-400);
+    margin-bottom: 1rem;
+   }
+
+   .info {
+    margin-bottom: 1rem;
+    border: #00fff7;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--c-blue-800) solid .125rem;
+    padding: 0 0 1.25rem 0;
+   }
+
+   .info p {
+    font-size: .9rem;
+    display: flex;
+    gap: .5rem;
+   }
+
+   .price {
+    color: var(--c-cyan);
+   }
+   
+   .nft-icon {
+    width: .7rem;
+   }
+
+   .clock-icon {
+    width: 1rem;
+   }
+
+   .creator p {
+    display: flex;
+    align-items: center;
+    font-size: .9rem;
+   }
+
+   .creator p span {
+    color: white;
+    margin-left: .4rem;
+   }
+
+   .creator-img {
+    width: 2rem;
+    border: white solid .1rem;
+    border-radius: 999px;
+    margin-right: 1rem;
+   }
 
       /* =============================
    5. BREAKPOINT CHNAGES
