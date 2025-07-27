@@ -15,10 +15,6 @@
     box-sizing: border-box;
   }
 
-  img {
-    width: 100%;
-  }
-
   ul li {
     font-style: none;
     list-style: none;
@@ -52,125 +48,151 @@
     --c-blue-800:#2f415b;
 }
 
-
-   /* =============================
-   3. BASE STYLES
+  /* =============================
+   CONTAINERS
    ============================= */
-    body {
-    color: var(--c-blue-500);
+   body {
+    background-color: var(--c-blue-950);
     font-family: var(--ff);
    }
 
-   a:hover {
-    color: #00fff7;
-  }
-
-   /* =============================
-   4. LAYOUT / COMPONENT STYLES
-   ============================= */
-   .wrapper{
-    background-color: var(--c-blue-950);
-    height: 100dvh;
+   .component-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
    }
 
-    .card {
-    background-color: var(--c-blue-900);
+   .card-container {
+    background-color: #14253d;
+    padding: 1.25rem;
     border-radius: 1rem;
-    padding: 1.125rem;
-    width: 21rem;
+    max-width: 350px;
+    width: 100%;
    }
 
-   .card .nft-img {
+   .nft-hero {
     position: relative;
-    border-radius: .5rem;
-}
-
-.card .nft-cover div{
-    position: absolute;
-    background-color: #00fff780;
-    width: 18.75rem;
-    height: 300px;
-    z-index: 999;
-    margin-top: -19rem;
-    border-radius: .5rem;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.card .nft-cover div:hover {
-    opacity: 100%;
-}
-
-.card .nft-cover div .overlay-icon {
-    width: 3rem;
-    margin-top: 50%;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-}
-
-   h1 {
-    color: var(--c-white);
-    font-size: 1.5rem;
-    font-weight: var(--fw-400);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
    }
 
-   .text p {
-    line-height: 1.5rem;
-    font-weight: var(--fw-400);
-    margin-bottom: 1rem;
+   .nft-content {
+    margin: 1.25rem 0;
+    width: 100%;
    }
 
-   .info {
-    margin-bottom: 1rem;
-    border: #00fff7;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: var(--c-blue-800) solid .125rem;
-    padding: 0 0 1.25rem 0;
-   }
-
-   .info p {
-    font-size: .9rem;
-    display: flex;
-    gap: .5rem;
-   }
-
-   .price {
-    color: var(--c-cyan);
-   }
-   
-   .nft-icon {
-    width: .7rem;
-   }
-
-   .clock-icon {
-    width: 1rem;
-   }
-
-   .creator p {
+   .nft-selling-info {
     display: flex;
     align-items: center;
-    font-size: .9rem;
+    justify-content: space-between;
    }
 
-   .creator p span {
-    color: white;
-    margin-left: .4rem;
+   .nft-creator {
+    display: flex;
+    align-items: center;
+    margin: 1.5rem 0 .125rem;
    }
 
-   .creator-img {
-    width: 2rem;
-    border: white solid .1rem;
-    border-radius: 999px;
-    margin-right: 1rem;
-   }
-
-      /* =============================
-   5. BREAKPOINT CHNAGES
+   /* =============================
+   HEADER
    ============================= */
+   .nft-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: .75rem;
+  }
+
+   /* =============================
+   MAIN
+   ============================= */
+   .nft-title {
+      color: var(--c-white);
+      font-weight: 400;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .nft-desc {
+      color: var(--c-blue-500);
+      line-height: 1.5;
+    }
+
+    .nft-price, .nft-time-left{
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+    }
+
+    .nft-price {
+      color: var(--c-cyan);
+    }
+
+    .nft-time-left {
+      color: var(--c-blue-500);
+    }
+
+    .nft-icon {
+      width: .75rem;
+      height: auto;
+    }
+
+    .clock-icon {
+      width: 1.25rem;
+      height: auto;
+    }
+
+    .under-line {
+      width: 100%;
+      height: 1px;
+      margin-top: 1.25rem;
+      background-color: #8bacda35;
+    }
+
+    .creator-img {
+      width: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+
+    .nft-creator-name {
+      color: var(--c-white);
+    }
+
+    .nft-creator-name span {
+      color: var(--c-blue-500);
+    }
+   /* =============================
+   MEDIA SCREEN BREAK POINTS
+   ============================= */
+   @media screen and (min-width: 1000px) {
+
+    .nft-hero-overlay {
+      position: absolute;
+      background-color: transparent;
+      height: 310px;
+      width: 310px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color .5s ease;
+    }
+
+    .nft-hero-overlay:hover {
+      height: 310px;
+      width: 310px;
+      border-radius: 8px;
+      background-color:#00fff765;
+      background-image: url(./images/icon-view.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    .nft-creator-name a {
+      transition: color .5s ease;
+    }
+
+    .nft-creator-name a:hover {
+      color: #00fff7;
+    }
+   }
